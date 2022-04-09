@@ -39,6 +39,6 @@ export const robots = [
         id: 7,
         name: 'Jazvec Forsky',
         username: 'jazvo',
-        email: 'fornerj@gmail.com'
+        email: 'forskyj@gmail.com'
     },
 ]
