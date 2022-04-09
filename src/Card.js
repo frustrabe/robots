@@ -1,6 +1,7 @@
 import React from "react";
 
-/*  background, display inline-block,border, padding, margin, grow animation*/
+//text center background, display inline-block,border,
+// padding, margin, grow animation, border width and shadow//
 const Card = ({ name, email, id }) => {
     return (
         <div className="tc bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5">
