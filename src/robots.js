@@ -13,32 +13,32 @@ export const robots = [
     },
     {
         id: 3,
-        name: 'Pikaso Forsky',
+        name: 'Pikaso Forcky',
         username: 'piko',
-        email: 'forskyp@gmail.com'
+        email: 'forckyp@gmail.com'
     },
     {
         id: 4,
-        name: 'Mike Forsky',
+        name: 'Mike Forcky',
         username: 'majk',
-        email: 'forskym@gmail.com'
+        email: 'forckym@gmail.com'
     },
     {
         id: 5,
-        name: 'Frederik Forsky',
+        name: 'Frederik Forcky',
         username: 'fredo',
-        email: 'fornerf@gmail.com'
+        email: 'forckyf@gmail.com'
     },
     {
         id: 6,
-        name: 'Corgi Forsky',
+        name: 'Corgi Forcky',
         username: 'corgo',
-        email: 'forskyc@gmail.com'
+        email: 'forckyc@gmail.com'
     },
     {
         id: 7,
-        name: 'Jazvec Forsky',
+        name: 'Jazvec Forcky',
         username: 'jazvo',
-        email: 'forskyj@gmail.com'
+        email: 'forckyj@gmail.com'
     },
 ]

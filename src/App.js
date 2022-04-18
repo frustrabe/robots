@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import { robots } from './robots';
 import SearchBox from './SearchBox';
+import './App.css';
 
 // App component has two states ("robots" and "searchfield"), App owns this state
 // any component that has state uses the class syntax so the constructor can be used to create
