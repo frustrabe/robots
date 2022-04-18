@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
-import { robots } from './robots';
 import SearchBox from './SearchBox';
 import './App.css';
 
@@ -16,13 +15,13 @@ class App extends Component {
             robots: [],
             searchfield: ''
         }
-        //console.log('constructor') 1.Constructor get created//
     }
 
     componentDidMount() {
-        this.setState({ robots: robots });
-        //console.log('componentDidMount') 3.Updated the state in componentDidMount,
-        //we need new render because if got from an empty array to rendering 'robots'//
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => this.setState({ robots: users }));
+
     }
 
     // onSearchChange gets passed down to SearchBox, everytime there is a change of input
@@ -41,15 +40,17 @@ class App extends Component {
         const filteredRobots = this.state.robots.filter(robots => {
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
-        //console.log('render') 2.Render gets run//
-        //4.Render gets run again//
-        return (
-            <div className='tc pa1'>
-                <h1 className='f2'>Robot Family</h1>
-                <SearchBox searchChange={this.onSearchChange} />
-                <CardList robots={filteredRobots} />
-            </div>
-        );
+        if (this.state.robots.length === 0) {
+            return <h1>Loading content...</h1>
+        } else {
+            return (
+                <div className='tc pa1'>
+                    <h1 className='f2'>Robot Family</h1>
+                    <SearchBox searchChange={this.onSearchChange} />
+                    <CardList robots={filteredRobots} />
+                </div>
+            );
+        }
     }
 }
 
