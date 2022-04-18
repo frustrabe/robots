@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
+import Scroll from './ScrollWheel';
 import './App.css';
 
 // App component has two states ("robots" and "searchfield"), App owns this state
@@ -47,7 +48,9 @@ class App extends Component {
                 <div className='tc pa1'>
                     <h1 className='f2'>Robot Family</h1>
                     <SearchBox searchChange={this.onSearchChange} />
-                    <CardList robots={filteredRobots} />
+                    <Scroll>
+                        <CardList robots={filteredRobots} />
+                    </Scroll>
                 </div>
             );
         }
