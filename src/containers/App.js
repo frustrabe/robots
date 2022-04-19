@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/ScrollWheel';
+import ErrorBoundary from '../components/Error Boundary';
 import './App.css';
 
 // App component has two states ("robots" and "searchfield"), App owns this state
@@ -49,7 +50,9 @@ class App extends Component {
                     <h1 className='f2'>Robot Family</h1>
                     <SearchBox searchChange={this.onSearchChange} />
                     <Scroll>
-                        <CardList robots={filteredRobots} />
+                        <ErrorBoundary>
+                            <CardList robots={filteredRobots} />
+                        </ErrorBoundary>
                     </Scroll>
                 </div>
             );
