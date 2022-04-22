@@ -3,7 +3,7 @@
     font-family: 'Press Start 2P';
     font-style: normal;
     font-weight: 400;
-    src: url('./press-start-2p-v12-latin-regular.woff'), format('embedded-opentype'),
+    src: url('/src/containers/PressStart2P.woff'), format('embedded-opentype'),
 }
 
 h1 {
