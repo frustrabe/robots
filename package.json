@@ -1,6 +1,6 @@
 {
   "name": "robots-app",
-  "homepage": "https://frustrabe.github.io/robots",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
